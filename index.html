@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MJDT Global – 全球仓储物流解决方案</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1a56db;--primary-dark:#1e40af;--primary-light:#3b82f6;
+  --accent:#f59e0b;--dark:#0f172a;--dark-2:#1e293b;
+  --gray:#64748b;--gray-light:#94a3b8;--border:#e2e8f0;
+  --bg:#f8fafc;--white:#fff;--success:#10b981;
+  --radius:12px;--radius-lg:20px;
+  --shadow:0 4px 24px rgba(0,0,0,.08);--shadow-lg:0 8px 48px rgba(0,0,0,.12);
+  --transition:all .3s cubic-bezier(.4,0,.2,1)
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:var(--dark);background:var(--white);line-height:1.6;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+img{max-width:100%;height:auto;display:block}
+
+/* ── Header ── */
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(226,232,240,.8);transition:var(--transition)}
+.header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-wrapper{display:flex;align-items:center;justify-content:space-between;height:72px;gap:32px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px}
+.logo-text{font-size:20px;font-weight:700;color:var(--dark)}
+.logo-accent{color:var(--primary)}
+.nav-menu{display:flex;align-items:center;gap:4px}
+.nav-link{padding:8px 16px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;color:var(--gray);transition:var(--transition)}
+.nav-link:hover{color:var(--primary);background:#eff6ff}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.lang-toggle{padding:6px 14px;border-radius:8px;border:1.5px solid var(--border);background:transparent;font-size:13px;font-weight:600;color:var(--gray);cursor:pointer;transition:var(--transition)}
+.lang-toggle:hover{border-color:var(--primary);color:var(--primary)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;transition:var(--transition)}
+
+/* ── Buttons ── */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 24px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:var(--transition);white-space:nowrap}
+.btn-primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+.btn-primary:hover{background:var(--primary-dark);border-color:var(--primary-dark);transform:translateY(-1px);box-shadow:0 4px 16px rgba(26,86,219,.3)}
+.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn-outline:hover{background:rgba(255,255,255,.15);border-color:#fff}
+.btn-lg{padding:14px 32px;font-size:16px;border-radius:12px}
+.btn-full{width:100%}
+
+/* ── Hero ── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:72px}
+.hero-bg{position:absolute;inset:0}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(15,23,42,.88) 0%,rgba(26,86,219,.72) 50%,rgba(15,23,42,.82) 100%)}
+.hero-slides{position:absolute;inset:0;background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 50%,#0f172a 100%)}
+.hero-content{position:relative;z-index:2;color:#fff;padding:80px 24px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:50px;background:rgba(245,158,11,.2);border:1px solid rgba(245,158,11,.4);color:#fbbf24;font-size:13px;font-weight:600;margin-bottom:24px}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#fbbf24;animation:pulse 2s infinite}
+.hero-title{font-size:clamp(36px,5vw,68px);font-weight:800;line-height:1.1;margin-bottom:24px;letter-spacing:-.02em}
+.hero-accent{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-desc{font-size:18px;color:rgba(255,255,255,.8);max-width:600px;margin-bottom:40px;line-height:1.7}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:64px}
+.hero-stats{display:flex;gap:48px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding-top:40px}
+.stat-num{font-size:32px;font-weight:800;color:#fff}
+.stat-label{font-size:13px;color:rgba(255,255,255,.6);margin-top:4px}
+.scroll-down{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;cursor:pointer;text-decoration:none}
+.scroll-arrow{width:24px;height:24px;border-right:2px solid rgba(255,255,255,.6);border-bottom:2px solid rgba(255,255,255,.6);transform:rotate(45deg);animation:bounce 2s infinite}
+
+/* ── Section ── */
+.section-header{text-align:center;margin-bottom:56px}
+.section-header h2{font-size:clamp(28px,3vw,42px);font-weight:800;color:var(--dark);margin-bottom:16px;letter-spacing:-.02em}
+.section-header p{font-size:17px;color:var(--gray);max-width:600px;margin:0 auto}
+.section-header.light h2{color:#fff}
+.section-header.light p{color:rgba(255,255,255,.7)}
+.section-header.light .section-tag{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9)}
+.section-tag{display:inline-block;padding:4px 14px;border-radius:50px;background:#eff6ff;color:var(--primary);font-size:13px;font-weight:600;margin-bottom:16px;letter-spacing:.05em;text-transform:uppercase}
+
+/* ── Services ── */
+.services{padding:100px 0;background:var(--bg)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:#fff;border-radius:var(--radius-lg);padding:36px 28px;border:1px solid var(--border);transition:var(--transition);position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--primary-light));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:56px;height:56px;border-radius:14px;background:#eff6ff;color:var(--primary);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.service-icon svg{width:28px;height:28px}
+.service-card h3{font-size:20px;font-weight:700;color:var(--dark);margin-bottom:12px}
+.service-card p{font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:20px}
+.service-link{color:var(--primary);font-size:14px;font-weight:600;text-decoration:none;transition:var(--transition)}
+
+/* ── Solutions ── */
+.solutions{padding:100px 0;background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%)}
+.solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.solution-item{padding:32px;border-radius:var(--radius-lg);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);transition:var(--transition)}
+.solution-item:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.solution-icon{font-size:36px;margin-bottom:16px}
+.solution-item h4{font-size:18px;font-weight:700;color:#fff;margin-bottom:10px}
+.solution-item p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.6}
+
+/* ── Gallery ── */
+.gallery-section{padding:100px 0;background:#fff}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;min-height:300px}
+.gallery-placeholder{grid-column:1/-1;display:flex;align-items:center;justify-content:center;min-height:200px}
+.placeholder-content{text-align:center;color:var(--gray-light);display:flex;flex-direction:column;align-items:center;gap:12px}
+.placeholder-content p{font-size:14px}
+
+/* ── Network ── */
+.network{padding:100px 0;background:var(--bg)}
+.routes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.route-card{display:flex;align-items:center;gap:16px;padding:24px;border-radius:var(--radius-lg);background:#fff;border:1px solid var(--border);transition:var(--transition)}
+.route-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--primary)}
+.route-flag{font-size:36px;flex-shrink:0}
+.route-info h4{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:4px}
+.route-type{font-size:12px;color:var(--primary);font-weight:500;background:#eff6ff;padding:2px 10px;border-radius:50px}
+
+/* ── Partners ── */
+.partners{padding:80px 0;overflow:hidden}
+.partners-track{overflow:hidden;position:relative}
+.partners-track::before,.partners-track::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2}
+.partners-track::before{left:0;background:linear-gradient(to right,#fff,transparent)}
+.partners-track::after{right:0;background:linear-gradient(to left,#fff,transparent)}
+.partners-slide{display:flex;gap:40px;animation:scroll-left 25s linear infinite;width:max-content}
+.partner-logo{height:60px;min-width:120px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--gray-light);border:1.5px solid var(--border);border-radius:12px;padding:0 24px;flex-shrink:0;transition:var(--transition)}
+.partner-logo:hover{color:var(--primary);border-color:var(--primary)}
+
+/* ── About ── */
+.about{padding:100px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-content h2{font-size:clamp(28px,3vw,40px);font-weight:800;color:var(--dark);margin-bottom:24px;line-height:1.2}
+.about-content p{font-size:16px;color:var(--gray);margin-bottom:20px;line-height:1.8}
+.about-features{margin-top:32px;display:flex;flex-direction:column;gap:14px}
+.about-feature{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--dark)}
+.check{width:22px;height:22px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:1px}
+.about-visual-box{background:linear-gradient(135deg,#eff6ff,#dbeafe);border-radius:var(--radius-lg);padding:48px;display:flex;align-items:center;justify-content:center;min-height:320px}
+.about-visual-inner{text-align:center}
+.about-visual-inner .big-num{font-size:80px;font-weight:800;color:var(--primary);line-height:1}
+.about-visual-inner .big-label{font-size:16px;color:var(--gray);margin-top:8px}
+.about-stats-row{display:flex;gap:32px;margin-top:32px;justify-content:center}
+.about-stat{text-align:center}
+.about-stat-num{font-size:28px;font-weight:800;color:var(--primary-dark)}
+.about-stat-label{font-size:12px;color:var(--gray);margin-top:2px}
+
+/* ── Contact ── */
+.contact{padding:100px 0;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+.contact-info h2{font-size:clamp(28px,3vw,40px);font-weight:800;color:var(--dark);margin-bottom:16px}
+.contact-info>p{font-size:16px;color:var(--gray);margin-bottom:40px;line-height:1.7}
+.contact-details{display:flex;flex-direction:column;gap:18px}
+.contact-item{display:flex;align-items:center;gap:14px;font-size:15px;color:var(--dark)}
+.contact-icon{font-size:20px;width:24px;text-align:center}
+.contact-form-wrap{background:#fff;border-radius:var(--radius-lg);padding:40px;box-shadow:var(--shadow-lg)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:13px;font-weight:600;color:var(--dark);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;color:var(--dark);background:#fff;transition:border-color .2s;font-family:inherit;appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(26,86,219,.1)}
+.form-group textarea{resize:vertical}
+.form-success{text-align:center;padding:40px 20px;display:none}
+.success-icon{width:64px;height:64px;border-radius:50%;background:var(--success);color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 20px}
+.form-success h3{font-size:22px;font-weight:700;margin-bottom:12px}
+.form-success p{color:var(--gray)}
+
+/* ── Footer ── */
+.footer{background:var(--dark-2);color:rgba(255,255,255,.7);padding:80px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;margin-bottom:60px}
+.footer-brand .logo-text{color:#fff}
+.footer-brand p{margin-top:16px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.55)}
+.social-links{display:flex;gap:12px;margin-top:24px}
+.social-link{padding:6px 14px;border-radius:8px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);font-size:12px;text-decoration:none;transition:var(--transition)}
+.social-link:hover{background:var(--primary);color:#fff}
+.footer-col h5{font-size:14px;font-weight:700;color:#fff;margin-bottom:20px;text-transform:uppercase;letter-spacing:.05em}
+.footer-col a,.footer-col span{display:block;font-size:14px;color:rgba(255,255,255,.55);text-decoration:none;margin-bottom:10px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;display:flex;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.4)}
+
+/* ── Back to Top ── */
+.back-to-top{position:fixed;bottom:32px;right:32px;z-index:500;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:20px;cursor:pointer;transition:var(--transition);opacity:0;pointer-events:none;box-shadow:var(--shadow)}
+.back-to-top.visible{opacity:1;pointer-events:all}
+.back-to-top:hover{background:var(--primary-dark);transform:translateY(-3px)}
+
+/* ── Keyframes ── */
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(6px)}}
+@keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+[data-aos]{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+[data-aos].aos-animate{opacity:1;transform:none}
+
+/* ── Responsive ── */
+@media(max-width:1024px){
+  .services-grid,.solutions-grid,.routes-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .nav-menu{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:#fff;padding:16px;border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+  .nav-menu.open{display:flex}
+  .hamburger{display:flex}
+  .hero-actions{flex-direction:column}
+  .hero-stats{gap:24px}
+  .services-grid,.solutions-grid,.routes-grid,.footer-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .form-row{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+  .contact-form-wrap{padding:24px}
+}
+@media(max-width:480px){
+  .gallery-grid{grid-template-columns:1fr}
+  .hero-title{font-size:32px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="#" class="logo">
+        <div class="logo-icon">M</div>
+        <span class="logo-text">MJDT<span class="logo-accent">Global</span></span>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#services" class="nav-link" data-zh="服务" data-en="Services">服务</a>
+        <a href="#solutions" class="nav-link" data-zh="解决方案" data-en="Solutions">解决方案</a>
+        <a href="#network" class="nav-link" data-zh="全球网络" data-en="Network">全球网络</a>
+        <a href="#about" class="nav-link" data-zh="关于我们" data-en="About">关于我们</a>
+        <a href="#contact" class="nav-link" data-zh="联系我们" data-en="Contact">联系我们</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button>
+        <a href="#contact" class="btn btn-primary" data-zh="免费询价" data-en="Get a Quote">免费询价</a>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-slides"></div>
+  </div>
+  <div class="container hero-content">
+    <div class="hero-badge" data-zh="全球物流专家" data-en="Global Logistics Expert">全球物流专家</div>
+    <h1 class="hero-title">
+      <span data-zh="全球仓储物流" data-en="Global Warehousing">全球仓储物流</span><br/>
+      <span class="hero-accent" data-zh="一站式解决方案" data-en="One-Stop Solution">一站式解决方案</span>
+    </h1>
+    <p class="hero-desc" data-zh="专业提供一件代发、代采购、散件拼箱及全球专线运输服务，覆盖孟加拉、以色列、澳洲、非洲等全球主要市场。" data-en="Professional one-stop service including drop shipping, procurement, LCL consolidation, and global express routes covering Bangladesh, Israel, Australia, Africa and more.">
+      专业提供一件代发、代采购、散件拼箱及全球专线运输服务，覆盖孟加拉、以色列、澳洲、非洲等全球主要市场。
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary btn-lg" data-zh="立即询价" data-en="Get Started">立即询价</a>
+      <a href="#services" class="btn btn-outline btn-lg" data-zh="了解服务" data-en="Our Services">了解服务</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">50+</div><div class="stat-label" data-zh="目的地国家" data-en="Countries">目的地国家</div></div>
+      <div class="stat"><div class="stat-num">10000+</div><div class="stat-label" data-zh="服务客户" data-en="Clients Served">服务客户</div></div>
+      <div class="stat"><div class="stat-num">99.2%</div><div class="stat-label" data-zh="准时交付率" data-en="On-time Delivery">准时交付率</div></div>
+      <div class="stat"><div class="stat-num">24/7</div><div class="stat-label" data-zh="全天候服务" data-en="Support">全天候服务</div></div>
+    </div>
+  </div>
+  <a href="#services" class="scroll-down"><div class="scroll-arrow"></div></a>
+</section>
+
+<!-- ===== Services ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-zh="核心业务" data-en="Core Business">核心业务</div>
+      <h2 data-zh="我们的服务" data-en="Our Services">我们的服务</h2>
+      <p data-zh="为您提供全面的供应链与物流解决方案" data-en="Comprehensive supply chain and logistics solutions for your business">为您提供全面的供应链与物流解决方案</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="6" y="14" width="36" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M16 14V10a2 2 0 012-2h12a2 2 0 012 2v4" stroke="currentColor" stroke-width="2.5"/><path d="M24 22v8M20 26h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+        <h3 data-zh="一件代发" data-en="Drop Shipping">一件代发</h3>
+        <p data-zh="无需备货，客户下单后我们直接从仓库发货至全球各地，快速高效，降低库存压力。" data-en="No need to stock inventory. We ship directly from our warehouse to your customers worldwide upon order placement.">无需备货，客户下单后我们直接从仓库发货至全球各地，快速高效，降低库存压力。</p>
+        <a href="#contact" class="service-link" data-zh="了解更多 →" data-en="Learn More →">了解更多 →</a>
+      </div>
+      <div class="service-card" data-aos="fade-up">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M17 17l2.5 2.5M28.5 28.5L31 31M17 31l2.5-2.5M28.5 19.5L31 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3 data-zh="代采购服务" data-en="Procurement Service">代采购服务</h3>
+        <p data-zh="专业的国内采购团队，帮助海外客户在中国市场采购优质商品，价格透明，品质保障。" data-en="Our professional domestic procurement team helps overseas clients source quality goods from the Chinese market with transparent pricing.">专业的国内采购团队，帮助海外客户在中国市场采购优质商品，价格透明，品质保障。</p>
+        <a href="#contact" class="service-link" data-zh="了解更多 →" data-en="Learn More →">了解更多 →</a>
+      </div>
+      <div class="service-card" data-aos="fade-up">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="4" y="18" width="40" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M12 18V14a4 4 0 014-4h16a4 4 0 014 4v4" stroke="currentColor" stroke-width="2.5"/><path d="M4 28h40" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/></svg></div>
+        <h3 data-zh="散件拼箱" data-en="LCL Consolidation">散件拼箱</h3>
+        <p data-zh="货物不足整箱？我们提供专业拼箱服务，与其他货物合并装箱，节省运费，按实际体积计费。" data-en="Not enough cargo for a full container? We offer professional LCL consolidation, combining your cargo with others to save on freight costs.">货物不足整箱？我们提供专业拼箱服务，与其他货物合并装箱，节省运费，按实际体积计费。</p>
+        <a href="#contact" class="service-link" data-zh="了解更多 →" data-en="Learn More →">了解更多 →</a>
+      </div>
+      <div class="service-card" data-aos="fade-up">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M4 20h40M14 10v28" stroke="currentColor" stroke-width="2" stroke-dasharray="4 2"/></svg></div>
+        <h3 data-zh="仓储管理" data-en="Warehousing">仓储管理</h3>
+        <p data-zh="专业保税仓、海外仓储服务，提供货物分拣、贴标、质检、包装等增值服务，安全可靠。" data-en="Professional bonded warehouse and overseas storage services including sorting, labeling, quality inspection and packaging value-added services.">专业保税仓、海外仓储服务，提供货物分拣、贴标、质检、包装等增值服务，安全可靠。</p>
+        <a href="#contact" class="service-link" data-zh="了解更多 →" data-en="Learn More →">了解更多 →</a>
+      </div>
+      <div class="service-card" data-aos="fade-up">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 16l16-8 16 8v16l-16 8-16-8V16z" stroke="currentColor" stroke-width="2.5"/><path d="M8 16l16 8M40 16l-16 8M24 24v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3 data-zh="空运专线" data-en="Air Freight">空运专线</h3>
+        <p data-zh="直达孟加拉、以色列、澳洲、非洲、南非等地区空运专线，速度快，价格优，实时跟踪货物状态。" data-en="Direct air freight routes to Bangladesh, Israel, Australia, Africa, South Africa and more. Fast, competitive pricing with real-time tracking.">直达孟加拉、以色列、澳洲、非洲、南非等地区空运专线，速度快，价格优，实时跟踪货物状态。</p>
+        <a href="#contact" class="service-link" data-zh="了解更多 →" data-en="Learn More →">了解更多 →</a>
+      </div>
+      <div class="service-card" data-aos="fade-up">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M6 32c0 0 6-8 18-8s18 8 18 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M6 38h36M12 32v6M24 24v8M36 32v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="20" r="4" stroke="currentColor" stroke-width="2"/></svg></div>
+        <h3 data-zh="海运服务" data-en="Sea Freight">海运服务</h3>
+        <p data-zh="提供整柜(FCL)和拼箱(LCL)海运服务，覆盖全球主要港口，成本低廉，适合大批量货物。" data-en="FCL and LCL sea freight services covering major global ports. Cost-effective solution for bulk shipments worldwide.">提供整柜(FCL)和拼箱(LCL)海运服务，覆盖全球主要港口，成本低廉，适合大批量货物。</p>
+        <a href="#contact" class="service-link" data-zh="了解更多 →" data-en="Learn More →">了解更多 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Solutions ===== -->
+<section class="solutions" id="solutions">
+  <div class="container">
+    <div class="section-header light">
+      <div class="section-tag" data-zh="为什么选择我们" data-en="Why Choose Us">为什么选择我们</div>
+      <h2 data-zh="MJDT Global 的优势" data-en="MJDT Global Advantages">MJDT Global 的优势</h2>
+      <p data-zh="专业、高效、可靠的全球物流服务" data-en="Professional, efficient and reliable global logistics services">专业、高效、可靠的全球物流服务</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-item"><div class="solution-icon">🌍</div><h4 data-zh="全球覆盖" data-en="Global Coverage">全球覆盖</h4><p data-zh="覆盖全球50+国家和地区，建立完善的物流网络" data-en="Coverage in 50+ countries with a comprehensive logistics network">覆盖全球50+国家和地区，建立完善的物流网络</p></div>
+      <div class="solution-item"><div class="solution-icon">⚡</div><h4 data-zh="快速高效" data-en="Fast & Efficient">快速高效</h4><p data-zh="24小时内处理订单，确保快速出货，缩短交货周期" data-en="Orders processed within 24 hours, ensuring fast dispatch and shorter delivery cycles">24小时内处理订单，确保快速出货，缩短交货周期</p></div>
+      <div class="solution-item"><div class="solution-icon">💰</div><h4 data-zh="价格透明" data-en="Transparent Pricing">价格透明</h4><p data-zh="无隐藏费用，报价清晰，帮助客户有效控制物流成本" data-en="No hidden fees, clear quotations, helping clients effectively control logistics costs">无隐藏费用，报价清晰，帮助客户有效控制物流成本</p></div>
+      <div class="solution-item"><div class="solution-icon">🔒</div><h4 data-zh="安全可靠" data-en="Safe & Reliable">安全可靠</h4><p data-zh="专业包装，全程保险，货物损坏率低于0.1%" data-en="Professional packaging, full insurance, cargo damage rate below 0.1%">专业包装，全程保险，货物损坏率低于0.1%</p></div>
+      <div class="solution-item"><div class="solution-icon">📱</div><h4 data-zh="实时追踪" data-en="Real-time Tracking">实时追踪</h4><p data-zh="全程可视化物流追踪，随时掌握货物最新动态" data-en="Full-journey visual logistics tracking, stay updated on cargo status anytime">全程可视化物流追踪，随时掌握货物最新动态</p></div>
+      <div class="solution-item"><div class="solution-icon">🤝</div><h4 data-zh="专属服务" data-en="Dedicated Service">专属服务</h4><p data-zh="专属客服团队，中英文双语服务，7×24小时响应" data-en="Dedicated customer service team, bilingual Chinese-English support, 24/7 response">专属客服团队，中英文双语服务，7×24小时响应</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Gallery ===== -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-zh="实力展示" data-en="Our Facility">实力展示</div>
+      <h2 data-zh="仓储与物流中心" data-en="Warehouses & Logistics Centers">仓储与物流中心</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-placeholder">
+        <div class="placeholder-content">
+          <svg viewBox="0 0 64 64" fill="none" width="64" height="64"><rect x="4" y="12" width="56" height="40" rx="4" stroke="#CBD5E1" stroke-width="2"/><circle cx="22" cy="26" r="6" stroke="#CBD5E1" stroke-width="2"/><path d="M4 40l16-12 12 10 10-8 18 14" stroke="#CBD5E1" stroke-width="2" stroke-linejoin="round"/></svg>
+          <p data-zh="图片将在后台上传后显示" data-en="Images will display after upload in admin panel">图片将在后台上传后显示</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Network ===== -->
+<section class="network" id="network">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-zh="全球布局" data-en="Global Network">全球布局</div>
+      <h2 data-zh="覆盖全球主要市场" data-en="Major Global Markets">覆盖全球主要市场</h2>
+      <p data-zh="专线路线直达各大洲核心枢纽" data-en="Direct routes to core hubs across all continents">专线路线直达各大洲核心枢纽</p>
+    </div>
+    <div class="routes-grid">
+      <div class="route-card"><div class="route-flag">🇧🇩</div><div class="route-info"><h4 data-zh="孟加拉专线" data-en="Bangladesh Express">孟加拉专线</h4><span class="route-type" data-zh="空运 · 5-7天" data-en="Air · 5-7 Days">空运 · 5-7天</span></div></div>
+      <div class="route-card"><div class="route-flag">🇮🇱</div><div class="route-info"><h4 data-zh="以色列专线" data-en="Israel Express">以色列专线</h4><span class="route-type" data-zh="空运/海运 · 7-14天" data-en="Air/Sea · 7-14 Days">空运/海运 · 7-14天</span></div></div>
+      <div class="route-card"><div class="route-flag">🇦🇺</div><div class="route-info"><h4 data-zh="澳洲专线" data-en="Australia Express">澳洲专线</h4><span class="route-type" data-zh="空运 · 7-10天" data-en="Air · 7-10 Days">空运 · 7-10天</span></div></div>
+      <div class="route-card"><div class="route-flag">🌍</div><div class="route-info"><h4 data-zh="非洲专线" data-en="Africa Express">非洲专线</h4><span class="route-type" data-zh="空运/海运 · 10-20天" data-en="Air/Sea · 10-20 Days">空运/海运 · 10-20天</span></div></div>
+      <div class="route-card"><div class="route-flag">🇿🇦</div><div class="route-info"><h4 data-zh="南非专线" data-en="South Africa Express">南非专线</h4><span class="route-type" data-zh="空运 · 8-12天" data-en="Air · 8-12 Days">空运 · 8-12天</span></div></div>
+      <div class="route-card"><div class="route-flag">🇬🇧</div><div class="route-info"><h4 data-zh="欧洲专线" data-en="Europe Express">欧洲专线</h4><span class="route-type" data-zh="空运/海运 · 10-25天" data-en="Air/Sea · 10-25 Days">空运/海运 · 10-25天</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Partners ===== -->
+<section class="partners" id="partners">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag" data-zh="合作伙伴" data-en="Partners">合作伙伴</div>
+      <h2 data-zh="携手全球领先物流商" data-en="Partnering with Global Logistics Leaders">携手全球领先物流商</h2>
+    </div>
+  </div>
+  <div class="partners-track">
+    <div class="partners-slide" id="partnersSlide">
+      <div class="partner-logo">DHL</div>
+      <div class="partner-logo">FedEx</div>
+      <div class="partner-logo">UPS</div>
+      <div class="partner-logo">TNT</div>
+      <div class="partner-logo">SF Express</div>
+      <div class="partner-logo">CEVA</div>
+      <div class="partner-logo">Maersk</div>
+      <div class="partner-logo">MSC</div>
+      <div class="partner-logo">DHL</div>
+      <div class="partner-logo">FedEx</div>
+      <div class="partner-logo">UPS</div>
+      <div class="partner-logo">TNT</div>
+      <div class="partner-logo">SF Express</div>
+      <div class="partner-logo">CEVA</div>
+      <div class="partner-logo">Maersk</div>
+      <div class="partner-logo">MSC</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content" data-aos="fade-right">
+        <div class="section-tag" data-zh="关于MJDT" data-en="About MJDT">关于MJDT</div>
+        <h2 data-zh="您的全球物流合作伙伴" data-en="Your Global Logistics Partner">您的全球物流合作伙伴</h2>
+        <p data-zh="MJDT Global 成立于深圳，是一家专注于跨境电商物流解决方案的综合性国际物流公司。我们拥有多年的行业经验，深耕中国至全球各主要市场的货物运输。" data-en="MJDT Global, founded in Shenzhen, is a comprehensive international logistics company focused on cross-border e-commerce logistics solutions. With years of industry experience, we specialize in cargo transportation from China to major global markets.">
+          MJDT Global 成立于深圳，是一家专注于跨境电商物流解决方案的综合性国际物流公司。我们拥有多年的行业经验，深耕中国至全球各主要市场的货物运输。
+        </p>
+        <p data-zh="凭借强大的合作网络、先进的仓储管理系统及专业的服务团队，我们为数千家跨境电商企业及个人卖家提供高效、可靠、经济实惠的物流解决方案。" data-en="Leveraging a powerful partner network, advanced warehouse management systems, and a professional service team, we provide efficient, reliable, and cost-effective logistics solutions to thousands of cross-border e-commerce businesses.">
+          凭借强大的合作网络、先进的仓储管理系统及专业的服务团队，我们为数千家跨境电商企业及个人卖家提供高效、可靠、经济实惠的物流解决方案。
+        </p>
+        <div class="about-features">
+          <div class="about-feature"><span class="check">✓</span><span data-zh="多年行业经验，专业可信赖" data-en="Years of industry experience, professional and trustworthy">多年行业经验，专业可信赖</span></div>
+          <div class="about-feature"><span class="check">✓</span><span data-zh="自有仓库及全球合作网络" data-en="Own warehouses and global partner network">自有仓库及全球合作网络</span></div>
+          <div class="about-feature"><span class="check">✓</span><span data-zh="一对一专属客服支持" data-en="One-on-one dedicated customer support">一对一专属客服支持</span></div>
+        </div>
+      </div>
+      <div class="about-visual" data-aos="fade-left">
+        <div class="about-visual-box">
+          <div class="about-visual-inner">
+            <div class="big-num">10+</div>
+            <div class="big-label" data-zh="年行业经验" data-en="Years Experience">年行业经验</div>
+            <div class="about-stats-row">
+              <div class="about-stat"><div class="about-stat-num">50+</div><div class="about-stat-label" data-zh="目的地" data-en="Destinations">目的地</div></div>
+              <div class="about-stat"><div class="about-stat-num">10K+</div><div class="about-stat-label" data-zh="客户" data-en="Clients">客户</div></div>
+              <div class="about-stat"><div class="about-stat-num">99%</div><div class="about-stat-label" data-zh="满意度" data-en="Satisfaction">满意度</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-tag" data-zh="联系我们" data-en="Contact Us">联系我们</div>
+        <h2 data-zh="立即获取专属报价" data-en="Get Your Custom Quote">立即获取专属报价</h2>
+        <p data-zh="填写下方表单，我们的专属顾问将在24小时内与您联系。" data-en="Fill out the form below and our dedicated consultant will contact you within 24 hours.">填写下方表单，我们的专属顾问将在24小时内与您联系。</p>
+        <div class="contact-details">
+          <div class="contact-item"><span class="contact-icon">📧</span><span>Seaairking@163.com</span></div>
+          <div class="contact-item"><span class="contact-icon">📱</span><span>+86 15915310198</span></div>
+          <div class="contact-item"><span class="contact-icon">📍</span><strong data-zh="深圳办公室" data-en="Shenzhen Office">深圳办公室</strong></div>
+          <div class="contact-item" style="padding-left:38px;"><span data-zh="宝安区西乡街道福华社区宝运达综合大厦" data-en="Baoyunda Comprehensive Building, Fuhua Community, Xixiang Street, Bao'an District, Shenzhen">宝安区西乡街道福华社区宝运达综合大厦</span></div>
+          <div class="contact-item"><span class="contact-icon">📍</span><strong data-zh="广州办公室" data-en="Guangzhou Office">广州办公室</strong></div>
+          <div class="contact-item" style="padding-left:38px;"><span data-zh="越秀区三元里大道山西大厦5楼" data-en="5th Floor, Shanxi Building, Sanyuanli Avenue, Yuexiu District, Guangzhou">越秀区三元里大道山西大厦5楼</span></div>
+          <div class="contact-item"><span class="contact-icon">🏭</span><strong data-zh="仓库" data-en="Warehouse">仓库</strong></div>
+          <div class="contact-item" style="padding-left:38px;"><span data-zh="广东省东莞市道滘镇文艺路1号" data-en="No. 1 Wenyi Road, Daojiao Town, Dongguan, Guangdong Province">广东省东莞市道滘镇文艺路1号</span></div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-zh="您的姓名 *" data-en="Your Name *">您的姓名 *</label>
+              <input type="text" data-ph-zh="请输入姓名" data-ph-en="Enter your name" placeholder="请输入姓名" required/>
+            </div>
+            <div class="form-group">
+              <label data-zh="联系方式 *" data-en="Contact Info *">联系方式 *</label>
+              <input type="text" data-ph-zh="电话/邮箱/微信" data-ph-en="Phone/Email/WeChat" placeholder="电话/邮箱/微信" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-zh="货物目的地" data-en="Destination">货物目的地</label>
+            <select>
+              <option value="" data-zh="请选择目的地" data-en="Select destination">请选择目的地</option>
+              <option value="bangladesh" data-zh="孟加拉" data-en="Bangladesh">孟加拉</option>
+              <option value="israel" data-zh="以色列" data-en="Israel">以色列</option>
+              <option value="australia" data-zh="澳大利亚" data-en="Australia">澳大利亚</option>
+              <option value="africa" data-zh="非洲" data-en="Africa">非洲</option>
+              <option value="southafrica" data-zh="南非" data-en="South Africa">南非</option>
+              <option value="europe" data-zh="欧洲" data-en="Europe">欧洲</option>
+              <option value="other" data-zh="其他" data-en="Other">其他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-zh="服务需求" data-en="Service Type">服务需求</label>
+            <select>
+              <option value="" data-zh="请选择服务类型" data-en="Select service type">请选择服务类型</option>
+              <option value="dropship" data-zh="一件代发" data-en="Drop Shipping">一件代发</option>
+              <option value="procurement" data-zh="代采购" data-en="Procurement">代采购</option>
+              <option value="lcl" data-zh="散件拼箱" data-en="LCL Consolidation">散件拼箱</option>
+              <option value="air" data-zh="空运专线" data-en="Air Freight">空运专线</option>
+              <option value="sea" data-zh="海运服务" data-en="Sea Freight">海运服务</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-zh="详细需求" data-en="Message">详细需求</label>
+            <textarea rows="4" data-ph-zh="请描述您的货物及物流需求..." data-ph-en="Please describe your cargo and logistics requirements..." placeholder="请描述您的货物及物流需求..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" data-zh="提交询价" data-en="Submit Inquiry">提交询价</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="success-icon">✓</div>
+          <h3 data-zh="提交成功！" data-en="Submitted Successfully!">提交成功！</h3>
+          <p data-zh="我们将在24小时内与您联系，感谢您的信任！" data-en="We will contact you within 24 hours. Thank you for your trust!">我们将在24小时内与您联系，感谢您的信任！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><div class="logo-icon">M</div><span class="logo-text">MJDT<span class="logo-accent">Global</span></span></div>
+        <p data-zh="专业全球仓储物流解决方案提供商，服务全球50+国家和地区。" data-en="Professional global warehousing and logistics solution provider, serving 50+ countries and regions worldwide.">专业全球仓储物流解决方案提供商，服务全球50+国家和地区。</p>
+        <div class="social-links">
+          <a href="#" class="social-link">WeChat</a>
+          <a href="#" class="social-link">WhatsApp</a>
+          <a href="#" class="social-link">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 data-zh="服务" data-en="Services">服务</h5>
+        <a href="#" data-zh="一件代发" data-en="Drop Shipping">一件代发</a>
+        <a href="#" data-zh="代采购" data-en="Procurement">代采购</a>
+        <a href="#" data-zh="散件拼箱" data-en="LCL Consolidation">散件拼箱</a>
+        <a href="#" data-zh="空运专线" data-en="Air Freight">空运专线</a>
+        <a href="#" data-zh="海运服务" data-en="Sea Freight">海运服务</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-zh="专线路由" data-en="Routes">专线路由</h5>
+        <a href="#" data-zh="孟加拉专线" data-en="Bangladesh">孟加拉专线</a>
+        <a href="#" data-zh="以色列专线" data-en="Israel">以色列专线</a>
+        <a href="#" data-zh="澳洲专线" data-en="Australia">澳洲专线</a>
+        <a href="#" data-zh="非洲专线" data-en="Africa">非洲专线</a>
+        <a href="#" data-zh="南非专线" data-en="South Africa">南非专线</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-zh="联系方式" data-en="Contact">联系方式</h5>
+        <span>Seaairking@163.com</span>
+        <span>+86 15915310198</span>
+        <span data-zh="深圳/广州/东莞" data-en="Shenzhen / Guangzhou / Dongguan">深圳/广州/东莞</span>
+        <span data-zh="周一至周六 9:00-18:00" data-en="Mon-Sat 9:00-18:00">周一至周六 9:00-18:00</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-zh="© 2024 MJDT Global. 版权所有." data-en="© 2024 MJDT Global. All rights reserved.">© 2024 MJDT Global. 版权所有.</p>
+      <p>mjdtglobal.com</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// 语言切换
+let currentLang = 'zh';
+function applyLang(lang) {
+  currentLang = lang;
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.getElementById('langToggle').textContent = lang === 'zh' ? 'EN' : '中文';
+  document.querySelectorAll('[data-zh],[data-en]').forEach(el => {
+    const t = el.getAttribute('data-' + lang);
+    if (t !== null) el.textContent = t;
+  });
+  document.querySelectorAll('[data-ph-zh],[data-ph-en]').forEach(el => {
+    const p = el.getAttribute('data-ph-' + lang);
+    if (p !== null) el.placeholder = p;
+  });
+}
+function toggleLang() { applyLang(currentLang === 'zh' ? 'en' : 'zh'); }
+function toggleMenu() { document.getElementById('navMenu').classList.toggle('open'); }
+
+// 滚动
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  document.getElementById('header').classList.toggle('scrolled', y > 20);
+  document.getElementById('backToTop').classList.toggle('visible', y > 400);
+  document.querySelectorAll('[data-aos]').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('aos-animate');
+  });
+});
+
+// 表单
+function submitForm(e) {
+  e.preventDefault();
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+
+// 平滑滚动
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if (href === '#') return;
+    e.preventDefault();
+    const el = document.querySelector(href);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    document.getElementById('navMenu').classList.remove('open');
+  });
+});
+
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+  applyLang('zh');
+  setTimeout(() => {
+    document.querySelectorAll('[data-aos]').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('aos-animate');
+    });
+  }, 100);
+});
+</script>
+</body>
+</html>
