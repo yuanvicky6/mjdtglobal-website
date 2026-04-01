@@ -9,4 +9,12 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://mjdtglobal.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mjdtglobal.com/"/>
   </url>
+  <url>
+    <loc>https://mjdtglobal.com/blog.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://mjdtglobal.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mjdtglobal.com/blog.html"/>
+  </url>
 </urlset>
