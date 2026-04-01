@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>MJDT Global – 全球仓储物流解决方案 | 一件代发 | 跨境物流专线</title>
+<title>MJDT Global – 全球仓储物流解决方案 | 一件代发 | 清关服务 | 跨境物流专线</title>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="MJDT Global 提供全球仓储物流解决方案，包括一件代发、代采购、散件拼箱、孟加拉/以色列/澳洲/非洲/南非空运海运专线。深圳广州仓库，专业跨境电商物流服务。"/>
-<meta name="keywords" content="仓储物流,一件代发,代采购,散件拼箱,跨境物流,孟加拉专线,以色列专线,澳洲专线,非洲专线,南非专线,空运,海运,MJDT Global,深圳物流,广州物流,东莞仓库"/>
+<meta name="description" content="MJDT Global 提供全球仓储物流解决方案，包括一件代发、代采购、清关服务、散件拼箱、孟加拉/以色列/澳洲/非洲/南非空运海运专线。深圳广州仓库，专业跨境电商物流服务。"/>
+<meta name="keywords" content="仓储物流,一件代发,代采购,清关服务,散件拼箱,跨境物流,孟加拉专线,以色列专线,澳洲专线,非洲专线,南非专线,空运,海运,UPS,DHL,MJDT Global,深圳物流,广州物流,东莞仓库"/>
 <meta name="author" content="MJDT Global"/>
 <meta name="robots" content="index, follow"/>
 <meta name="language" content="zh-CN"/>
@@ -17,7 +17,7 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://mjdtglobal.com/"/>
 <meta property="og:title" content="MJDT Global – 全球仓储物流解决方案"/>
-<meta property="og:description" content="专业跨境物流服务：一件代发、代采购、散件拼箱，孟加拉/以色列/澳洲/非洲/南非空运海运专线。"/>
+<meta property="og:description" content="专业跨境物流服务：一件代发、代采购、清关服务、散件拼箱，孟加拉/以色列/澳洲/非洲/南非空运海运专线。"/>
 <meta property="og:image" content="https://mjdtglobal.com/og-image.jpg"/>
 <meta property="og:locale" content="zh_CN"/>
 <meta property="og:site_name" content="MJDT Global"/>
@@ -73,7 +73,8 @@
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "孟加拉专线"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "以色列专线"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "澳洲专线"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "非洲/南非专线"}}
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "非洲/南非专线"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "清关服务"}}
     ]
   }
 }
@@ -152,6 +153,12 @@ img{max-width:100%;height:auto;display:block}
 /* ── Services ── */
 .services{padding:100px 0;background:var(--bg)}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card.wide{grid-column:span 2;display:flex;gap:28px;align-items:flex-start}
+.service-card.wide .service-icon{flex-shrink:0;margin-bottom:0}
+.service-card.wide h3{margin-bottom:8px}
+.service-card.wide p{margin-bottom:12px}
+.service-card.wide .service-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.service-tag{display:inline-block;padding:4px 12px;border-radius:20px;background:#eff6ff;color:var(--primary);font-size:12px;font-weight:500}
 .service-card{background:#fff;border-radius:var(--radius-lg);padding:36px 28px;border:1px solid var(--border);transition:var(--transition);position:relative;overflow:hidden}
 .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--primary-light));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
 .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
@@ -262,6 +269,7 @@ img{max-width:100%;height:auto;display:block}
 /* ── Responsive ── */
 @media(max-width:1024px){
   .services-grid,.solutions-grid,.routes-grid{grid-template-columns:repeat(2,1fr)}
+  .service-card.wide{grid-column:span 2;flex-direction:column}
   .about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
   .footer-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -272,6 +280,7 @@ img{max-width:100%;height:auto;display:block}
   .hero-actions{flex-direction:column}
   .hero-stats{gap:24px}
   .services-grid,.solutions-grid,.routes-grid,.footer-grid{grid-template-columns:1fr}
+  .service-card.wide{grid-column:span 1}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
   .form-row{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;gap:8px;text-align:center}
@@ -323,8 +332,8 @@ img{max-width:100%;height:auto;display:block}
       <span data-zh="全球仓储物流" data-en="Global Warehousing">全球仓储物流</span><br/>
       <span class="hero-accent" data-zh="一站式解决方案" data-en="One-Stop Solution">一站式解决方案</span>
     </h1>
-    <p class="hero-desc" data-zh="专业提供一件代发、代采购、散件拼箱及全球专线运输服务，覆盖孟加拉、以色列、澳洲、非洲等全球主要市场。" data-en="Professional one-stop service including drop shipping, procurement, LCL consolidation, and global express routes covering Bangladesh, Israel, Australia, Africa and more.">
-      专业提供一件代发、代采购、散件拼箱及全球专线运输服务，覆盖孟加拉、以色列、澳洲、非洲等全球主要市场。
+    <p class="hero-desc" data-zh="专业提供一件代发、代采购、清关服务、散件拼箱及全球专线运输服务，覆盖孟加拉、以色列、澳洲、非洲等全球主要市场。" data-en="Professional one-stop service including drop shipping, procurement, customs clearance, LCL consolidation, and global express routes covering Bangladesh, Israel, Australia, Africa and more.">
+      专业提供一件代发、代采购、清关服务、散件拼箱及全球专线运输服务，覆盖孟加拉、以色列、澳洲、非洲等全球主要市场。
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-primary btn-lg" data-zh="立即询价" data-en="Get Started">立即询价</a>
@@ -384,6 +393,23 @@ img{max-width:100%;height:auto;display:block}
         <h3 data-zh="海运服务" data-en="Sea Freight">海运服务</h3>
         <p data-zh="提供整柜(FCL)和拼箱(LCL)海运服务，覆盖全球主要港口，成本低廉，适合大批量货物。" data-en="FCL and LCL sea freight services covering major global ports. Cost-effective solution for bulk shipments worldwide.">提供整柜(FCL)和拼箱(LCL)海运服务，覆盖全球主要港口，成本低廉，适合大批量货物。</p>
         <a href="#contact" class="service-link" data-zh="了解更多 →" data-en="Learn More →">了解更多 →</a>
+      </div>
+      <div class="service-card wide" data-aos="fade-up">
+        <div class="service-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="32" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M6 18h36M6 28h36" stroke="currentColor" stroke-width="2"/><path d="M16 8v32" stroke="currentColor" stroke-width="2"/><circle cx="29" cy="23" r="4" stroke="currentColor" stroke-width="2"/><path d="M29 25v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div>
+          <h3 data-zh="清关服务" data-en="Customs Clearance">清关服务</h3>
+          <p data-zh="依托经验丰富的海外清关与海外仓配一体化专业团队，公司匠心打造优质全链路电商物流专线，提供国内外仓储一件代发服务，构建起高效、专业的物流服务体系。在末端配送环节，公司与UPS、DHL、USPS，以及澳洲邮政、荷兰邮政、德国邮政、捷克邮政等国际知名物流商达成深度战略合作，持有核心代理资质，更配备欧洲本土化卡车派送团队。凭借集约的本土化派送大账号资源优势，实现全球多地高效稳定配送。凭借出色的服务品质与卓越的性价比，持续为全球化B2C、B2B、CBC等电商模式，提供全流程、一站式物流解决方案。" data-en="Backed by an experienced overseas customs clearance and fulfillment team, we deliver premium end-to-end e-commerce logistics solutions with integrated warehousing and drop shipping services. We partner with UPS, DHL, USPS, Australia Post, PostNL, Deutsche Post, Czech Post and other global carriers with core agency qualifications, plus a European localized truck delivery team. Leveraging consolidated local delivery account resources, we achieve efficient and stable multi-region distribution worldwide.">依托经验丰富的海外清关与海外仓配一体化专业团队，公司匠心打造优质全链路电商物流专线，提供国内外仓储一件代发服务，构建起高效、专业的物流服务体系。在末端配送环节，公司与UPS、DHL、USPS，以及澳洲邮政、荷兰邮政、德国邮政、捷克邮政等国际知名物流商达成深度战略合作，持有核心代理资质，更配备欧洲本土化卡车派送团队。凭借集约的本土化派送大账号资源优势，实现全球多地高效稳定配送。凭借出色的服务品质与卓越的性价比，持续为全球化B2C、B2B、CBC等电商模式，提供全流程、一站式物流解决方案。</p>
+          <div class="service-tags">
+            <span class="service-tag">UPS</span>
+            <span class="service-tag">DHL</span>
+            <span class="service-tag">USPS</span>
+            <span class="service-tag">澳洲邮政</span>
+            <span class="service-tag">荷兰邮政</span>
+            <span class="service-tag">德国邮政</span>
+            <span class="service-tag">捷克邮政</span>
+            <span class="service-tag">欧洲卡车派送</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -487,6 +513,9 @@ img{max-width:100%;height:auto;display:block}
         </p>
         <p data-zh="凭借强大的合作网络、先进的仓储管理系统及专业的服务团队，我们为数千家跨境电商企业及个人卖家提供高效、可靠、经济实惠的物流解决方案。" data-en="Leveraging a powerful partner network, advanced warehouse management systems, and a professional service team, we provide efficient, reliable, and cost-effective logistics solutions to thousands of cross-border e-commerce businesses.">
           凭借强大的合作网络、先进的仓储管理系统及专业的服务团队，我们为数千家跨境电商企业及个人卖家提供高效、可靠、经济实惠的物流解决方案。
+        </p>
+        <p data-zh="依托经验丰富的海外清关与海外仓配一体化专业团队，公司与UPS、DHL、USPS及澳洲邮政、荷兰邮政、德国邮政、捷克邮政等国际知名物流商达成深度战略合作，持有核心代理资质，配备欧洲本土化卡车派送团队，持续为全球化B2C、B2B、CBC等电商模式提供全流程、一站式物流解决方案。" data-en="Backed by an experienced overseas customs clearance and fulfillment team, we partner with UPS, DHL, USPS, Australia Post, PostNL, Deutsche Post, Czech Post and other global carriers with core agency qualifications, plus a European localized truck delivery team, providing full-process, one-stop logistics solutions for global B2C, B2B, and CBC e-commerce models.">
+          依托经验丰富的海外清关与海外仓配一体化专业团队，公司与UPS、DHL、USPS及澳洲邮政、荷兰邮政、德国邮政、捷克邮政等国际知名物流商达成深度战略合作，持有核心代理资质，配备欧洲本土化卡车派送团队，持续为全球化B2C、B2B、CBC等电商模式提供全流程、一站式物流解决方案。
         </p>
         <div class="about-features">
           <div class="about-feature"><span class="check">✓</span><span data-zh="多年行业经验，专业可信赖" data-en="Years of industry experience, professional and trustworthy">多年行业经验，专业可信赖</span></div>
