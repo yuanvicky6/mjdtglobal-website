@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mjdtglobal.com/sitemap.xml
+# 站点地图
+Sitemap: https://www.mjdtglobal.com/sitemap.xml
