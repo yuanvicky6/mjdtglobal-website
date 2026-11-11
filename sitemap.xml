@@ -20,9 +20,15 @@
   </url>
   <url>
     <loc>https://www.mjdtglobal.com/blog/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mjdtglobal.com/blog/eu-ics2-ens-filing-guide-20261111</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mjdtglobal.com/blog/china-to-australia-port-choice-landside-costs-20261110</loc>
