@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Overseas Warehouse WMS Integration 2026: API, EDI &amp; Order Data Flow | MJDT Global</title>
-<meta name="description" content="A practical 2026 guide to integrating an overseas warehouse with your storefront: the three data flows that matter, API versus EDI versus flat file, order cut-offs and idempotency, why available stock is not on-hand stock, warehouse event callbacks, carrier and label integration, the silent failure modes, and a go-live checklist you can test before peak season."/>
+<title>Overseas Warehouse WMS Integration 2026: API &amp; EDI</title>
+<meta name="description" content="Connecting your storefront to a warehouse WMS: API, webhook, EDI and flat-file flows, inventory states, cut-off times and duplicate-order risk."/>
 <meta name="keywords" content="overseas warehouse WMS integration 2026, 3PL API integration, EDI 940 945 947, warehouse management system integration, order data flow 3PL, inventory sync overseas warehouse, webhook order push, idempotency duplicate orders, carrier label API 3PL, SSCC ASN EDI 856, flat file SFTP fulfilment, 3PL onboarding checklist"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"/>
 <meta name="author" content="MJDT Global"/>
@@ -13,27 +13,83 @@
 <link rel="alternate" hreflang="zh-CN" href="https://www.mjdtglobal.com/"/>
 <link rel="alternate" hreflang="x-default" href="https://www.mjdtglobal.com/"/>
 <meta property="og:type" content="article"/>
-<meta property="og:title" content="Overseas Warehouse WMS Integration 2026: API, EDI &amp; Order Data Flow"/>
+<meta property="og:title" content="Overseas Warehouse WMS Integration 2026: API &amp; EDI"/>
 <meta property="og:description" content="Your warehouse is only as good as the data it receives. How orders, stock and events should actually move between a storefront and an overseas 3PL - and where the integration quietly breaks."/>
 <meta property="og:url" content="https://www.mjdtglobal.com/blog/overseas-warehouse-wms-integration-api-edi-20261116"/>
 <meta property="og:site_name" content="MJDT Global"/>
 <meta property="og:image" content="https://www.mjdtglobal.com/og-image.jpg"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Overseas Warehouse WMS Integration 2026: API, EDI &amp; Order Data Flow"/>
+<meta name="twitter:title" content="Overseas Warehouse WMS Integration 2026: API &amp; EDI"/>
 <meta name="twitter:description" content="API, EDI or flat file - what each is really good at, why available stock is not on-hand stock, and the failure modes that only show up at peak volume."/>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Overseas Warehouse WMS Integration 2026: API, EDI and Order Data Flow",
+  "headline": "Overseas Warehouse WMS Integration 2026: API & EDI",
   "description": "A 2026 operational guide to integrating a storefront with an overseas warehouse: the inbound, order and inventory data flows, choosing between API, EDI and flat file transfer, order cut-offs and idempotency, allocation and available-to-promise logic, warehouse event callbacks, carrier and label services, the silent failure modes that appear at volume, and a go-live checklist.",
-  "author": { "@type": "Organization", "name": "MJDT Global", "url": "https://www.mjdtglobal.com/" },
-  "publisher": { "@type": "Organization", "name": "MJDT Global", "logo": { "@type": "ImageObject", "url": "https://www.mjdtglobal.com/favicon.svg" } },
+  "author": {
+    "@type": "Organization",
+    "name": "MJDT Global",
+    "url": "https://www.mjdtglobal.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MJDT Global",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.mjdtglobal.com/favicon.svg"
+    },
+    "@id": "https://www.mjdtglobal.com/#organization"
+  },
   "datePublished": "2026-11-16",
   "dateModified": "2026-11-16",
   "mainEntityOfPage": "https://www.mjdtglobal.com/blog/overseas-warehouse-wms-integration-api-edi-20261116",
-  "inLanguage": "en"
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://www.mjdtglobal.com/blog#blog",
+    "name": "MJDT Global Logistics Blog",
+    "url": "https://www.mjdtglobal.com/blog/"
+  },
+  "articleSection": "Overseas Warehouse & Fulfilment",
+  "keywords": [
+    "overseas warehouse WMS integration 2026",
+    "3PL API integration",
+    "EDI 940 945 947",
+    "warehouse management system integration",
+    "order data flow 3PL",
+    "inventory sync overseas warehouse",
+    "webhook order push",
+    "idempotency duplicate orders",
+    "carrier label API 3PL",
+    "SSCC ASN EDI 856",
+    "flat file SFTP fulfilment",
+    "3PL onboarding checklist"
+  ],
+  "wordCount": 1857,
+  "isAccessibleForFree": true,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      "p.lead"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Overseas warehousing"
+    },
+    {
+      "@type": "Thing",
+      "name": "Order fulfilment"
+    },
+    {
+      "@type": "Thing",
+      "name": "Inventory management"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">

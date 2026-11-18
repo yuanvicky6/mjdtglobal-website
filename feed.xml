@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>MJDT Global Logistics Blog</title>
+<link>https://www.mjdtglobal.com/blog/</link>
+<description>Practical guides on shipping from China: customs, transit times, documentation and delivery for Europe DDP, Israel, Bangladesh, Australia and Africa.</description>
+<language>en</language>
+<lastBuildDate>Wed, 18 Nov 2026 09:00:00 +0000</lastBuildDate>
+<atom:link href="https://www.mjdtglobal.com/feed.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>EU CBAM 2026: Authorised Declarant, the 50-Tonne Threshold &amp; Emissions Data for China Exporters</title>
+<link>https://www.mjdtglobal.com/blog/eu-cbam-2026-authorised-declarant-emissions-data-20261118</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/eu-cbam-2026-authorised-declarant-emissions-data-20261118</guid>
+<description>CBAM became a customs condition in 2026, not a reporting chore. Who must hold declarant status, how the 50-tonne threshold is measured, default versus verified emissions values, the 2027 certificate calendar, the 2028 downstream expansion and what DDP sellers have to produce.</description>
+<category>CBAM · Carbon Compliance · Europe · 欧洲清提派</category>
+<pubDate>Wed, 18 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Australia Ocean Schedule Reliability 2026: Blank Sailings, Rolled Cargo &amp; Buffer Planning</title>
+<link>https://www.mjdtglobal.com/blog/china-to-australia-schedule-reliability-blank-sailings-20261117</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-australia-schedule-reliability-blank-sailings-20261117</guid>
+<description>The published ETA is a forecast, not a fact. How blank sailings and rolled cargo actually work on the Australia lane, what typhoons and a compressed Golden Week did to 2026 schedules, transhipment risk versus direct loops, destination bunching, and buffer planning that turns reliability into a reorder-point input.</description>
+<category>Schedule Reliability · Blank Sailings · Australia · 澳洲专线</category>
+<pubDate>Tue, 17 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Overseas Warehouse WMS Integration 2026: API, EDI &amp; Order Data Flow</title>
+<link>https://www.mjdtglobal.com/blog/overseas-warehouse-wms-integration-api-edi-20261116</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/overseas-warehouse-wms-integration-api-edi-20261116</guid>
+<description>Where fulfilment actually breaks: the three data flows, API versus EDI versus flat file, cut-offs and idempotency, why available stock is not on-hand stock, the events worth insisting on, and a go-live test plan you can run before peak season.</description>
+<category>Overseas Warehouse &amp;middot; WMS Integration &amp;middot; API &amp; EDI &amp;middot; 海外仓代发</category>
+<pubDate>Mon, 16 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Bangladesh Shipping Documents &amp; Customs Clearance 2026: Bill of Entry, PSI &amp; HS Code</title>
+<link>https://www.mjdtglobal.com/blog/china-to-bangladesh-shipping-documents-customs-clearance-20261114</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-bangladesh-shipping-documents-customs-clearance-20261114</guid>
+<description>Where Bangladesh consignments actually stall: the document set by stage, pre-shipment inspection booked against the final invoice, HS classification driving the total tax incidence, Single Window permits, and the C&amp;F handover that decides the release date at Chattogram.</description>
+<category>Documents &amp;middot; Customs &amp;middot; Bangladesh &amp;middot; 南亚专线</category>
+<pubDate>Sat, 14 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Israel Shipping 2026: Red Sea Routing, ETA Volatility &amp; Transit Risk</title>
+<link>https://www.mjdtglobal.com/blog/china-to-israel-red-sea-routing-eta-volatility-20261113</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-israel-red-sea-routing-eta-volatility-20261113</guid>
+<description>Why two containers booked the same day can arrive two weeks apart on this lane: partial Suez return, one-way mixed routings, the surcharge stack line by line, Ashdod and Haifa waiting times, transit variance as working capital, and the clauses that survive a mid-voyage rerouting.</description>
+<category>Ocean &amp;middot; Routing &amp;middot; Israel &amp;middot; 以色列专线</category>
+<pubDate>Fri, 13 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Landlocked Southern Africa 2026: Durban, Beira, Walvis Bay &amp; Dar es Salaam Transit Corridors</title>
+<link>https://www.mjdtglobal.com/blog/china-to-landlocked-southern-africa-transit-corridors-20261112</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-landlocked-southern-africa-transit-corridors-20261112</guid>
+<description>Zimbabwe, Zambia, Botswana, Malawi and the DRC all import through someone else's coast. How the four gateways compare, how SADC transit bonds are lodged and acquitted, where duty and VAT are assessed, which border posts set your ETA, and why DDP rarely survives the last 1,000 km.</description>
+<category>Transit &amp;middot; Landlocked SADC &amp;middot; 非洲专线</category>
+<pubDate>Thu, 12 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>EU ICS2 ENS Filing 2026: The Filing Chain, the Clock &amp; the Data That Holds Your Container</title>
+<link>https://www.mjdtglobal.com/blog/eu-ics2-ens-filing-guide-20261111</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/eu-ics2-ens-filing-guide-20261111</guid>
+<description>The transition is over and carriers now refuse EU-bound cargo without a Movement Reference Number. Who files at master, house and lowest-house level, the 24-hour pre-loading deadline by mode, the six data failures that trigger a Do Not Load, why an MRN is not a customs clearance, and how FBA and warehouse replenishment absorb an ENS rejection.</description>
+<category>EU DDP &amp;middot; ICS2 &amp;middot; ENS Filing &amp;middot; 欧洲专线</category>
+<pubDate>Wed, 11 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Australia Sea Freight 2026: Port Choice &amp; the Landside Cost Stack</title>
+<link>https://www.mjdtglobal.com/blog/china-to-australia-port-choice-landside-costs-20261110</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-australia-port-choice-landside-costs-20261110</guid>
+<description>Melbourne, Sydney, Brisbane, Fremantle and Adelaide compared by catchment and scale, then the charges that decide the landed cost: terminal access and booking fees, empty container park gate fees, terminal storage versus demurrage and detention, free-time counting rules, rail versus road at Port Botany, and a gateway-matching table.</description>
+<category>Sea Freight &amp;middot; Ports &amp;middot; Landside Costs &amp;middot; 澳洲专线</category>
+<pubDate>Tue, 10 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Overseas Warehouse Value-Added Services 2026: FBA Prep, Kitting &amp; Relabelling</title>
+<link>https://www.mjdtglobal.com/blog/overseas-warehouse-value-added-services-kitting-fba-prep-20261109</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/overseas-warehouse-value-added-services-kitting-fba-prep-20261109</guid>
+<description>Amazon no longer preps and labels units for shipments created from 2026, so the work moved upstream. What counts as value-added, the FBA rules that get units rejected, kitting and bundling as new SKUs, remove-and-relabel discipline, retail routing guides with SSCC-18 and ASN data, and how to write a VAS schedule that survives an audit.</description>
+<category>Value-Added Services &amp;middot; Kitting &amp;middot; FBA Prep &amp;middot; 海外仓代发</category>
+<pubDate>Mon, 09 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Bangladesh Project Cargo 2026: Heavy Machinery, OOG &amp; Capital Equipment</title>
+<link>https://www.mjdtglobal.com/blog/china-to-bangladesh-project-cargo-capital-machinery-20261108</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-bangladesh-project-cargo-capital-machinery-20261108</guid>
+<description>A container with a bigger box is still a container. Why project cargo is priced per piece: OOG dimensions and lift plans, the Chattogram jetty load limit and the Laldia Char heavy-lift terminal, breakbulk versus flat rack, road permits for indivisible loads, the low capital machinery duty route under SRO conditions, and the sequence that protects a start-up date.</description>
+<category>Project Cargo &amp;middot; Heavy Machinery &amp;middot; Bangladesh &amp;middot; 南亚专线</category>
+<pubDate>Sun, 08 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Israel Customs Clearance 2026: Documents, Broker Workflow &amp; the Cost of a Hold</title>
+<link>https://www.mjdtglobal.com/blog/china-to-israel-customs-clearance-documents-20261107</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-israel-customs-clearance-documents-20261107</guid>
+<description>Who may act as importer of record, the document pack and what each item decides, eight-digit classification and pre-rulings, the duty–purchase tax–18% VAT cascade, pre-clearance and payment, the storage clock, DDP vs DAP, ministry gates and post-clearance audit.</description>
+<category>Customs Clearance &amp;middot; Documentation &amp;middot; Israel &amp;middot; 以色列专线</category>
+<pubDate>Sat, 07 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to South Africa Air Freight 2026: OR Tambo, Chargeable Weight &amp; When Air Beats Ocean</title>
+<link>https://www.mjdtglobal.com/blog/china-to-south-africa-air-freight-ortambo-20261106</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-south-africa-air-freight-ortambo-20261106</guid>
+<description>Air is the wrong mode for most South Africa cargo and the only mode for a narrow slice of it. How the JNB lane is priced: chargeable weight at 1:6000, fuel and security surcharges, SARS clearance with NRCS, ICASA and ITAC approvals, duty and VAT arithmetic, battery cargo rules, and where air loses to ocean.</description>
+<category>Air Freight &amp;middot; Customs &amp;middot; South Africa &amp;middot; 非洲专线</category>
+<pubDate>Fri, 06 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>EU DDP Shipping 2026: €3 Duty, €2 Handling Fee &amp; IOSS for China Parcels</title>
+<link>https://www.mjdtglobal.com/blog/eu-ddp-ecommerce-parcel-duty-handling-fee-20261105</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/eu-ddp-ecommerce-parcel-duty-handling-fee-20261105</guid>
+<description>The €150 duty exemption is gone and the €2 per-item handling fee is live. How per-item duty arithmetic really works, the three product identifiers now required, IOSS versus destination-state clearance, DDP versus DAP risk, and when bulk DDP into an EU warehouse beats parcel direct.</description>
+<category>EU Customs · Duty &amp; VAT · Europe · 欧洲清提派</category>
+<pubDate>Thu, 05 Nov 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Australia Oversized &amp; Bulky Goods Shipping 2026: Furniture, Appliances &amp; E-Bikes</title>
+<link>https://www.mjdtglobal.com/blog/china-to-australia-oversized-bulky-goods-20261030</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-australia-oversized-bulky-goods-20261030</guid>
+<description>Light-but-large cargo inverts the usual freight rules: volume governs the price, handling governs the damage and the address governs the sale. Chargeable weight, the LCL-to-FCL crossover, pallet and carton engineering, ISPM 15 and seasonal biosecurity, plus tail-lift, two-man and inside-placement delivery.</description>
+<category>Oversized Cargo · Bulky Goods · Australia · 澳洲专线</category>
+<pubDate>Fri, 30 Oct 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Overseas Warehouse Inventory Accuracy 2026: Cycle Counting, Variance Control &amp; Shrinkage Governance</title>
+<link>https://www.mjdtglobal.com/blog/overseas-warehouse-inventory-accuracy-cycle-counting-20261028</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/overseas-warehouse-inventory-accuracy-cycle-counting-20261028</guid>
+<description>You cannot walk an overseas floor, so the stock number is only as good as the count behind it. How accuracy is measured, the six counting methods compared, tolerances, blind-count discipline, where variances actually come from, and the four clauses to fix in a 3PL agreement.</description>
+<category>Inventory Accuracy · Cycle Counting · Overseas Warehouse · 海外仓代发</category>
+<pubDate>Wed, 28 Oct 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Bangladesh Inland Leg 2026: Chattogram to Dhaka by Road, Rail or River Barge</title>
+<link>https://www.mjdtglobal.com/blog/china-to-bangladesh-chattogram-dhaka-inland-leg-20261027</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-bangladesh-chattogram-dhaka-inland-leg-20261027</guid>
+<description>The sea voyage is the predictable part. How containers actually leave Chattogram: road as the default and its failure modes, Kamalapur ICD under a locomotive shortage, the Pangaon barge revival, off-dock CFS charges, the documents that gate the truck, and free time control.</description>
+<category>Inland Leg · Chattogram–Dhaka · Bangladesh · 孟加拉专线</category>
+<pubDate>Tue, 27 Oct 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Israel Last-Mile Delivery 2026: Pickup Points, Lockers &amp; Failed Deliveries</title>
+<link>https://www.mjdtglobal.com/blog/china-to-israel-last-mile-delivery-pickup-network-20261026</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-israel-last-mile-delivery-pickup-network-20261026</guid>
+<description>Israel is a collection-first market. How the final leg behaves for China-origin parcels: pickup points versus lockers versus branch counters, metro and periphery coverage, seven-digit mikud addressing, where import VAT meets delivery, what a failed drop really costs, and the six numbers to track.</description>
+<category>Last Mile · Pickup Points · Israel · 以色列专线</category>
+<pubDate>Mon, 26 Oct 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to West Africa LCL Consolidation 2026: Lagos, Tema &amp; Abidjan Shared Containers</title>
+<link>https://www.mjdtglobal.com/blog/china-to-west-africa-lcl-consolidation-20261023</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-west-africa-lcl-consolidation-20261023</guid>
+<description>Most West Africa programmes start inside someone else's container. How the origin-to-CFS chain really runs, revenue-ton billing, the destination charges that dominate the bill, LCL vs FCL break-even, gateway choice, Form M and PAAR, CTN and BSC, and packing for deconsolidation.</description>
+<category>LCL · Consolidation · Africa · 非洲专线</category>
+<pubDate>Fri, 23 Oct 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>EU Packaging EPR &amp; PPWR for DDP Sellers 2026: Registration, Labels &amp; Parcel Design</title>
+<link>https://www.mjdtglobal.com/blog/europe-ddp-packaging-epr-ppwr-20261022</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/europe-ddp-packaging-epr-ppwr-20261022</guid>
+<description>The compliance layer outside a DDP freight quote: who is the packaging producer in each market, which layers must be reported, authorised representatives, small-business relief and design decisions that belong in Shenzhen.</description>
+<category>Packaging · EPR · Europe · 欧洲清提派</category>
+<pubDate>Thu, 22 Oct 2026 09:00:00 +0000</pubDate>
+</item>
+<item>
+<title>China to Australia Returns &amp; Warranty Handling 2026: Returns Hub vs Return-to-Origin, Duty &amp; GST</title>
+<link>https://www.mjdtglobal.com/blog/china-to-australia-returns-warranty-handling-20261021</link>
+<guid isPermaLink="true">https://www.mjdtglobal.com/blog/china-to-australia-returns-warranty-handling-20261021</guid>
+<description>The reverse leg most sellers never design. Buyer expectations under Australian consumer rules, local returns hub versus shipping stock home, the four disposition paths, GST treatment when goods cross back, and how to keep returns and warranty claims on separate clocks.</description>
+<category>Returns · Warranty · Australia · 澳洲专线</category>
+<pubDate>Wed, 21 Oct 2026 09:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>
